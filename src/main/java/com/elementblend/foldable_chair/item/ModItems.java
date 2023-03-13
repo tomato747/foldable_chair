@@ -12,7 +12,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Foldable_Chair.MOD_ID);
     public static final RegistryObject<Item> FOLDABLECHAIR = ITEMS.register("foldable_chair",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+            () -> new FoldableChairItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
