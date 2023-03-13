@@ -1,5 +1,6 @@
 package com.elementblend.foldable_chair;
 
+import com.elementblend.foldable_chair.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -21,6 +22,8 @@ public class Foldable_Chair {
 
     public Foldable_Chair() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
